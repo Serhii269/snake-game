@@ -2,6 +2,10 @@ import pygame
 import time
 import random
 
+pygame.mixer.init()
+pygame.mixer.music.load('snake.mp3')
+pygame.mixer.music.play(-1, 0.0)
+
 pygame.init()
 white = (255, 255, 255)
 black = (255, 255, 102)
@@ -99,6 +103,8 @@ def gameLoop():
         clock.tick(snake_speed)
     pygame.quit()
     quit()
+
+ pygame.mixer.music.stop()
 
 
 gameLoop()
